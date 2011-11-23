@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TwitterHelloworld</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%- flash.each do |name, msg| -%>
+<div class="flash_<%= name %>">
+<%=msg%></div>
+<%-end-%>
+<div><%=yield%></div>
+</body>
+</html>
